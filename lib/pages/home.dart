@@ -28,7 +28,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      //prima kontol
+      //prima Ganteng banget
       key: _scaffoldKey,
       endDrawerEnableOpenDragGesture: false,
       drawer: Drawer(
