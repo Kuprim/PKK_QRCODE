@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers
 
 import 'package:absensi_qr/constants/const.dart';
-import 'package:absensi_qr/pages/home.dart';
+import 'package:absensi_qr/pages/Siswa/home.dart';
 import 'package:absensi_qr/widgets/formprofil.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

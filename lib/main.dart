@@ -1,5 +1,5 @@
-import 'package:absensi_qr/pages/confirmasipage.dart';
-import 'package:absensi_qr/pages/home.dart';
+import 'package:absensi_qr/pages/Siswa/confirmasipage.dart';
+import 'package:absensi_qr/pages/Siswa/home.dart';
 import 'package:absensi_qr/pages/login.dart';
 import 'package:absensi_qr/pages/welcomepage.dart';
 import 'package:flutter/material.dart';

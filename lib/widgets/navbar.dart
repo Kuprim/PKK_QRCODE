@@ -1,7 +1,7 @@
 import 'package:absensi_qr/constants/const.dart';
-import 'package:absensi_qr/pages/home.dart';
-import 'package:absensi_qr/pages/notifikasi.dart';
-import 'package:absensi_qr/pages/riwayat.dart';
+import 'package:absensi_qr/pages/Siswa/home.dart';
+import 'package:absensi_qr/pages/Siswa/notifikasi.dart';
+import 'package:absensi_qr/pages/Siswa/riwayat.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';

@@ -2,9 +2,9 @@
 
 import 'package:absensi_qr/constants/const.dart';
 import 'package:absensi_qr/pages/login.dart';
-import 'package:absensi_qr/pages/profilpage.dart';
-import 'package:absensi_qr/pages/scan_qr.dart';
-import 'package:absensi_qr/pages/settings.dart';
+import 'package:absensi_qr/pages/Siswa/profilpage.dart';
+import 'package:absensi_qr/pages/Siswa/scan_qr.dart';
+import 'package:absensi_qr/pages/Siswa/settings.dart';
 import 'package:absensi_qr/pages/welcomepage.dart';
 import 'package:absensi_qr/widgets/carousel.dart';
 import 'package:flutter/cupertino.dart';

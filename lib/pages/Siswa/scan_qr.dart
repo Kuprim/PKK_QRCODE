@@ -1,8 +1,7 @@
 // ignore_for_file: prefer_const_constructors, sized_box_for_whitespace
 
 import 'package:absensi_qr/constants/const.dart';
-import 'package:absensi_qr/pages/confirmasipage.dart';
-import 'package:absensi_qr/pages/home.dart';
+import 'package:absensi_qr/pages/Siswa/confirmasipage.dart';
 import 'package:absensi_qr/widgets/navbar.dart';
 import 'package:flutter/material.dart';
 
