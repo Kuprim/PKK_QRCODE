@@ -221,7 +221,10 @@ class _FormLoginState extends State<FormLogin> {
               },
               child: Text(
                 "Login",
-                style: TextStyle(color: Color(kFirstColor)),
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
               ),
             ),
           ),

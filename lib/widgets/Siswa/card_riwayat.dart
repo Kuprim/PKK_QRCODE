@@ -31,7 +31,7 @@ class _CardRiwayatState extends State<CardRiwayat> {
             padding: EdgeInsets.only(top: size.height * 0.05),
             child: Container(
               height: size.height * 0.15,
-              width: size.width * 0.75,
+              width: size.width * 0.8,
               decoration: const BoxDecoration(),
               child: Card(
                 shape: RoundedRectangleBorder(
@@ -41,6 +41,7 @@ class _CardRiwayatState extends State<CardRiwayat> {
                     Padding(
                       padding: const EdgeInsets.only(left: 13),
                       child: Container(
+                        height: size.height * 0.1,
                         child: Image(
                           image: AssetImage(widget.gambar),
                         ),
@@ -78,7 +79,7 @@ class _CardRiwayatState extends State<CardRiwayat> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(left: size.width * 0.09),
+                      padding: EdgeInsets.only(left: size.width * 0.1),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         // ignore: prefer_const_literals_to_create_immutables

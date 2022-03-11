@@ -54,64 +54,83 @@ class _CarouselWelcomeState extends State<CarouselWelcome> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        Container(
-          decoration: BoxDecoration(
-              color: Color(kThirdColor),
-              borderRadius: BorderRadius.circular(20)),
-          width: size.width * 0.8,
-          height: size.height * 0.6,
-          child: CarouselSlider(
-            items: image,
-            carouselController: _controller,
-            options: CarouselOptions(
-                viewportFraction: 1,
-                enableInfiniteScroll: false,
-                autoPlay: true,
-                enlargeCenterPage: true,
-                aspectRatio: 1.0,
-                onPageChanged: (index, reason) {
-                  setState(() {
-                    _current = index;
-                  });
-                }),
-          ),
-        ),
+      body: Column( children: [
         Padding(
-          padding: EdgeInsets.only(
-              top: size.height * 0.03, bottom: size.height * 0.02),
-          child: Center(
-            child: Container(
-              child: Text(
-                "Welcome to nGabsen",
-                style: TextStyle(
-                  fontFamily: 'Poppins',
+          padding: EdgeInsets.only(bottom: size.height * 0),
+          child: Container(
+              decoration: BoxDecoration(
                   color: Color(kThirdColor),
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-          ),
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: image.asMap().entries.map((entry) {
-            return GestureDetector(
-              onTap: () => _controller.animateToPage(entry.key),
-              child: Container(
-                width: 20.0,
-                height: 6.0,
-                margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
-                decoration: BoxDecoration(
-                    shape: BoxShape.rectangle,
-                    color: (Theme.of(context).brightness == Brightness.dark
-                            ? Colors.white
-                            : Colors.black)
-                        .withOpacity(_current == entry.key ? 0.9 : 0.4)),
-              ),
-            );
-          }).toList(),
+                  borderRadius: BorderRadius.only(
+                      bottomRight: Radius.circular(20),
+                      bottomLeft: Radius.circular(20))),
+              width: size.width * 1,
+              height: size.height * 0.8,
+              child: Column(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(
+                        top: size.height * 0.1, bottom: size.height * 0.0),
+                    child: Center(
+                      child: Padding(
+                        padding: EdgeInsets.only(bottom: size.height * 0.05),
+                        child: Container(
+                          child: Text(
+                            "Welcome to nGabsen",
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
+                              color: Colors.white,
+                              fontSize: 28,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    child: CarouselSlider(
+                      items: image,
+                      carouselController: _controller,
+                      options: CarouselOptions(
+                          viewportFraction: 1,
+                          enableInfiniteScroll: false,
+                          autoPlay: true,
+                          enlargeCenterPage: true,
+                          aspectRatio: 1.0,
+                          onPageChanged: (index, reason) {
+                            setState(() {
+                              _current = index;
+                            });
+                          }),
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: image.asMap().entries.map((entry) {
+                      return GestureDetector(
+                        onTap: () => _controller.animateToPage(entry.key),
+                        child: Padding(
+                          padding: EdgeInsets.only(top: size.height * 0.07),
+                          child: Container(
+                            width: 20.0,
+                            height: 6.0,
+                            margin: EdgeInsets.symmetric(
+                                vertical: 8.0, horizontal: 4.0),
+                            decoration: BoxDecoration(
+                                shape: BoxShape.rectangle,
+                                color: (Theme.of(context).brightness ==
+                                            Brightness.dark
+                                        ? Colors.black
+                                        : Colors.white)
+                                    .withOpacity(
+                                        _current == entry.key ? 0.9 : 0.4)),
+                          ),
+                        ),
+                      );
+                    }).toList(),
+                  ),
+                ],
+              )),
         ),
         Padding(
           padding:
@@ -120,7 +139,7 @@ class _CarouselWelcomeState extends State<CarouselWelcome> {
             child: Center(
               child: Text(
                 "Mempermudah kita semua dalam absensi\nsetiap harinyaa",
-                style: TextStyle(fontFamily: 'Poppins', fontSize: 16),
+                style: TextStyle(fontFamily: 'Poppins', fontSize: 18),
               ),
             ),
           ),
@@ -140,9 +159,9 @@ class _CarouselWelcomeState extends State<CarouselWelcome> {
               child: Text(
                 "Get Started  >",
                 style: TextStyle(
-                  fontSize: 19,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black),
+                    fontSize: 19,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black),
               ),
             ),
           ),

@@ -124,17 +124,8 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ),
-            RaisedButton(
-              onPressed: () {
-                Get.offAll(Login());
-
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(
-                //     builder: (c) => WelcomePage(),
-                //   ),
-                // );
-              },
+            GestureDetector(
+              onTap: (){Get.offAll(Login());},
               child: Container(
                 height: size.height * 0.15,
                 decoration: BoxDecoration(
@@ -263,7 +254,9 @@ class _HomeState extends State<Home> {
                 );
               },
               child: Padding(
-                padding: EdgeInsets.only(bottom: size.height * 0.07),
+                padding: EdgeInsets.only(
+                  left: size.width * 0.06,
+                  bottom: size.height * 0.09),
                 child: Container(
                   child: Image(
                     image: AssetImage("assets/images/qrsmk.png"),

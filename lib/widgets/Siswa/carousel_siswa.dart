@@ -16,32 +16,33 @@ class _CarouselHomeState extends State<CarouselHome> {
   int _current = 0;
   final List<Widget> image = [
     Container(
-    height: 100,
-    width: 300,
-    decoration : BoxDecoration(
-    image: DecorationImage(
-    image: AssetImage( 'assets/images/pkk1.png'),
-    fit: BoxFit.cover),
-    )
-  ),
+        height: 2,
+        width: 300,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('assets/images/pkk1.png'), fit: BoxFit.fill),
+        )),
     Container(
-      height: 100,
-      width: 300, 
-      decoration : BoxDecoration(
-      image: DecorationImage(
-      image: AssetImage( 'assets/images/welcome.png'),
-      fit: BoxFit.cover),
-      )
-    ), 
+        height: 2,
+        width: 300,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('assets/images/pkk1.png'), fit: BoxFit.fill),
+        )),
     Container(
-      height: 100,
-      width: 300, 
-      decoration : BoxDecoration(
-      image: DecorationImage(
-      image: AssetImage( 'assets/images/welcome.png'),
-      fit: BoxFit.cover),
-      )
-    )           
+        height: 2,
+        width: 300,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('assets/images/pkk1.png'), fit: BoxFit.fill),
+        )),
+    Container(
+        height: 2,
+        width: 300,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('assets/images/pkk1.png'), fit: BoxFit.fill),
+        )),
   ];
   final CarouselController _controller = CarouselController();
   final _urlImages = [
@@ -49,31 +50,36 @@ class _CarouselHomeState extends State<CarouselHome> {
     'assets/images/welcome.png',
     'assets/images/welcome.png',
   ];
-  
-  
 
   @override
   Widget build(BuildContext context) {
+    
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          CarouselSlider(
+      body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: Color(kFourthColor),
+          ),
+          height: size.height *  0.2,
+          width: size.width * 0.82,
+          child: CarouselSlider(
             items: image,
             carouselController: _controller,
             options: CarouselOptions(
-              viewportFraction: 1,
+                viewportFraction: 1,
                 enableInfiniteScroll: false,
                 autoPlay: true,
                 enlargeCenterPage: true,
-                //aspectRatio: 3.0,
+                //aspectRatio: 4.0,
                 onPageChanged: (index, reason) {
                   setState(() {
                     _current = index;
                   });
                 }),
           ),
-        
+        ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: image.asMap().entries.map((entry) {
