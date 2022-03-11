@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:absensi_qr/widgets/card_riwayat.dart';
+import 'package:absensi_qr/widgets/Siswa/card_riwayat.dart';
 import 'package:flutter/material.dart';
 
 class IsiRiwayat extends StatelessWidget {

@@ -2,15 +2,12 @@
 
 import 'package:absensi_qr/constants/const.dart';
 import 'package:absensi_qr/pages/login.dart';
-import 'package:absensi_qr/pages/Siswa/profilpage.dart';
+import 'package:absensi_qr/pages/profilpage.dart';
 import 'package:absensi_qr/pages/Siswa/scan_qr.dart';
-import 'package:absensi_qr/pages/Siswa/settings.dart';
-import 'package:absensi_qr/pages/welcomepage.dart';
-import 'package:absensi_qr/widgets/carousel.dart';
+import 'package:absensi_qr/pages/settings.dart';
+import 'package:absensi_qr/widgets/Siswa/carousel_siswa.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:carousel_slider/carousel_slider.dart';
-import 'package:form_field_validator/form_field_validator.dart';
 import 'package:get/get.dart';
 
 class Home extends StatefulWidget {

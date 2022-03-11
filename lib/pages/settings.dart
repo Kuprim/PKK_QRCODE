@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers
 
 import 'package:absensi_qr/constants/const.dart';
-import 'package:absensi_qr/widgets/navbar.dart';
+import 'package:absensi_qr/widgets/Siswa/navbar_siswa.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

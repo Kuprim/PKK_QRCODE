@@ -1,6 +1,6 @@
 import 'package:absensi_qr/constants/const.dart';
 import 'package:absensi_qr/dummy/isi_riwayat.dart';
-import 'package:absensi_qr/widgets/card_riwayat.dart';
+import 'package:absensi_qr/widgets/Siswa/card_riwayat.dart';
 import 'package:flutter/material.dart';
 
 class RiwayatAbsen extends StatefulWidget {

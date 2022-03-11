@@ -2,7 +2,7 @@
 
 import 'package:absensi_qr/constants/const.dart';
 import 'package:absensi_qr/pages/Siswa/home.dart';
-import 'package:absensi_qr/widgets/navbar.dart';
+import 'package:absensi_qr/widgets/Siswa/navbar_siswa.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
