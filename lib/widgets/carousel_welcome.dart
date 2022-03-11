@@ -154,7 +154,12 @@ class _CarouselWelcomeState extends State<CarouselWelcome> {
                 color: Color(kSecondColor)),
             child: TextButton(
               onPressed: () {
-                Get.off(Login());
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (c) => Login(),
+                  ),
+                );
               },
               child: Text(
                 "Get Started  >",

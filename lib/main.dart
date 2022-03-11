@@ -1,3 +1,4 @@
+import 'package:absensi_qr/pages/Guru/inputjadwal.dart';
 import 'package:absensi_qr/pages/Siswa/confirmasipage.dart';
 import 'package:absensi_qr/pages/Siswa/home.dart';
 import 'package:absensi_qr/pages/login.dart';
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const WelcomePage(),
+      home: const InputJadwal(),
     );
   }
 }
