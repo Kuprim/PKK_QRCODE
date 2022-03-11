@@ -61,8 +61,8 @@ class _CarouselWelcomeState extends State<CarouselWelcome> {
               decoration: BoxDecoration(
                   color: Color(kThirdColor),
                   borderRadius: BorderRadius.only(
-                      bottomRight: Radius.circular(20),
-                      bottomLeft: Radius.circular(20))),
+                      bottomRight: Radius.circular(70),
+                      bottomLeft: Radius.circular(70))),
               width: size.width * 1,
               height: size.height * 0.8,
               child: Column(

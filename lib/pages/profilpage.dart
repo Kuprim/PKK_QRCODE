@@ -2,6 +2,7 @@
 
 import 'package:absensi_qr/constants/const.dart';
 import 'package:absensi_qr/pages/Siswa/home.dart';
+import 'package:absensi_qr/widgets/Siswa/navbar_siswa.dart';
 import 'package:absensi_qr/widgets/formprofil.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -125,7 +126,7 @@ class _ProfilPageState extends State<ProfilPage> {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                    builder: (c) => Home(),
+                    builder: (c) => NavbarQr(),
                   ),
                 );
               },

@@ -49,7 +49,6 @@ class _ConfirmasiPageState extends State<ConfirmasiPage> {
                     )),
               ),
             ),
-            
             Padding(
               padding: EdgeInsets.only(bottom: size.height * 0.4),
               child: Container(
@@ -259,21 +258,68 @@ class _ConfirmasiPageState extends State<ConfirmasiPage> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(top: size.height * 0.005),
+                      padding: EdgeInsets.only(
+                          left: size.width * 0.01, top: size.height * 0.005),
                       child: Container(
-                        color: Color(kFourthColor),
-                        height: size.height * 0.03,
+                        decoration: BoxDecoration(
+                            color: Color(kFourthColor),
+                            border: Border(
+                                top: BorderSide(
+                                    width: 5, color: Color(kFirstColor)))),
+                        height: size.height * 0.1,
                         width: size.width * 0.6,
-                        child: Padding(
-                          padding: EdgeInsets.only(top: 3, left: 10),
-                          child: Text(
-                            "Andika Cakra Langit",
-                            style: TextStyle(
-                              fontFamily: 'Poppins',
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
+                        child: Row(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.only(top: 3, left: 10),
+                              child: Text(
+                                "Catatan",
+                                style: TextStyle(
+                                  fontFamily: 'Poppins',
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
                             ),
-                          ),
+                            Column(
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.only(top: size.height * 0.01, left: size.width * 0.18),
+                                  child: Text(
+                                    "Senin",
+                                    style: TextStyle(
+                                      fontFamily: 'Poppins',
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(top: size.height * 0.002, left: size.width * 0.18),
+                                  child: Text(
+                                    "05 Maret 1998",
+                                    style: TextStyle(
+                                      fontFamily: 'Poppins',
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(top: size.height * 0.001, left: size.width * 0.18),
+                                  child: Text(
+                                    "04.20 - 10.00",
+                                    style: TextStyle(
+                                      color: Color(kThirdColor),
+                                      fontFamily: 'Poppins',
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
                       ),
                     ),
@@ -302,8 +348,7 @@ class _ConfirmasiPageState extends State<ConfirmasiPage> {
             ),
             Padding(
               padding: EdgeInsets.only(
-                left: size.width *0.43,
-                bottom: size.height * 0.7),
+                  left: size.width * 0.43, bottom: size.height * 0.7),
               child: Container(
                 width: size.width * 0.3,
                 height: size.height * 0.15,

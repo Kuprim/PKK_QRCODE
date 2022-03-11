@@ -37,12 +37,12 @@ class _ScanQrState extends State<ScanQr> {
                   children: [
                     Padding(
                       padding: EdgeInsets.only(
-                          top: size.height * 0.1,
+                          top: size.height * 0.0,
                           bottom: size.height * 0.1,
-                          left: size.width * 0.1),
+                          left: size.width * 0.05),
                       child: Container(
-                        height: size.height * 0.1,
-                        width: size.width * 0.2,
+                        height: size.height * 0.06,
+                        width: size.width * 0.13,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           color: Color(kSecondColor),
@@ -56,134 +56,47 @@ class _ScanQrState extends State<ScanQr> {
                   ],
                 ),
               ),
-              Container(
-                height: size.height * 0.25,
-                width: size.width * 0.3,
-                child: Image(
-                  image: AssetImage("assets/images/profpic.png"),
+              Padding(
+                padding: EdgeInsets.only(
+                    top: size.height * 0.25, right: size.width * 0.215),
+                child: Container(
+                  alignment: Alignment(0, 0),
+                  height: size.height * 0.06,
+                  width: size.width * 0.55,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Color(kThirdColor)
+                  ),
+                  child: Text(
+                    "Scan QR Code",
+                    style: TextStyle(
+                      color: Colors.white,
+                        fontFamily: 'Poppins',
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold),
+                  ),
                 ),
-              )
+              ),
             ],
           ),
           Column(
-            // ignore: prefer_const_literals_to_create_immutables
             children: [
-              Text(
-                "Scan QR Code",
-                style: TextStyle(
-                    fontFamily: 'Poppins',
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (c) => ConfirmasiPage(),
-                    ),
-                  );
-                },
-                child: Image(
-                  image: AssetImage("assets/images/qrcode.png"),
+              Padding(
+                padding: EdgeInsets.only(top: size.height * 0.05),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (c) => ConfirmasiPage(),
+                      ),
+                    );
+                  },
+                  child: Image(
+                    image: AssetImage("assets/images/qrcode.png"),
+                  ),
                 ),
               ),
-              //tanda
-              /*Container(
-                height: size.height * 0.3,
-                width: size.width * 0.9,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
-                  color: Color(kFirstColor),
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  // ignore: prefer_const_literals_to_create_immutables
-                  children: [
-                    Text(
-                      "Your Code",
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w700,
-                        fontFamily: 'Poppins',
-                        color: Color(kThirdColor),
-                      ),
-                    ),
-                    Text(
-                      "Hasil Dari Qr Code Akan Segera Tampil",
-                      style: TextStyle(
-                        fontSize: 10,
-                        fontWeight: FontWeight.w700,
-                        fontFamily: 'Poppins',
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(top: 10),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Container(
-                            height: size.height * 0.17,
-                            width: size.width * 0.2,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Color(kSecondColor)),
-                            child: Center(
-                              child: Text("...",
-                                  style: TextStyle(
-                                      fontSize: 30,
-                                      fontWeight: FontWeight.w700,
-                                      fontFamily: 'Poppins')),
-                            ),
-                          ),
-                          Container(
-                            height: size.height * 0.17,
-                            width: size.width * 0.2,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Color(kSecondColor)),
-                            child: Center(
-                              child: Text("...",
-                                  style: TextStyle(
-                                      fontSize: 30,
-                                      fontWeight: FontWeight.w700,
-                                      fontFamily: 'Poppins')),
-                            ),
-                          ),
-                          Container(
-                            height: size.height * 0.17,
-                            width: size.width * 0.2,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Color(kSecondColor)),
-                            child: Center(
-                              child: Text("...",
-                                  style: TextStyle(
-                                      fontSize: 30,
-                                      fontWeight: FontWeight.w700,
-                                      fontFamily: 'Poppins')),
-                            ),
-                          ),
-                          Container(
-                            height: size.height * 0.17,
-                            width: size.width * 0.2,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Color(kSecondColor)),
-                            child: Center(
-                              child: Text("...",
-                                  style: TextStyle(
-                                      fontSize: 30,
-                                      fontWeight: FontWeight.w700,
-                                      fontFamily: 'Poppins')),
-                            ),
-                          ),
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              ),*/
             ],
           )
         ],

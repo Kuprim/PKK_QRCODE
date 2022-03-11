@@ -16,29 +16,27 @@ class _CarouselHomeState extends State<CarouselHome> {
   int _current = 0;
   final List<Widget> image = [
     Container(
-        height: 2,
-        width: 300,
+        height: 1,
+        width: 250,
         decoration: BoxDecoration(
           image: DecorationImage(
               image: AssetImage('assets/images/pkk1.png'), fit: BoxFit.fill),
         )),
     Container(
-        height: 2,
-        width: 300,
+        height: 1,
+        width: 250,
         decoration: BoxDecoration(
           image: DecorationImage(
               image: AssetImage('assets/images/pkk1.png'), fit: BoxFit.fill),
-        )),
-    Container(
-        height: 2,
-        width: 300,
+        )),Container(
+        height: 1,
+        width: 250,
         decoration: BoxDecoration(
           image: DecorationImage(
               image: AssetImage('assets/images/pkk1.png'), fit: BoxFit.fill),
-        )),
-    Container(
-        height: 2,
-        width: 300,
+        )),Container(
+        height: 1,
+        width: 250,
         decoration: BoxDecoration(
           image: DecorationImage(
               image: AssetImage('assets/images/pkk1.png'), fit: BoxFit.fill),
@@ -62,8 +60,8 @@ class _CarouselHomeState extends State<CarouselHome> {
             borderRadius: BorderRadius.circular(10),
             color: Color(kFourthColor),
           ),
-          height: size.height *  0.2,
-          width: size.width * 0.82,
+          height: size.height *  0.17,
+          width: size.width * 0.7,
           child: CarouselSlider(
             items: image,
             carouselController: _controller,
@@ -80,24 +78,27 @@ class _CarouselHomeState extends State<CarouselHome> {
                 }),
           ),
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: image.asMap().entries.map((entry) {
-            return GestureDetector(
-              onTap: () => _controller.animateToPage(entry.key),
-              child: Container(
-                width: 10.0,
-                height: 10.0,
-                margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
-                decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: (Theme.of(context).brightness == Brightness.dark
-                            ? Colors.white
-                            : Colors.black)
-                        .withOpacity(_current == entry.key ? 0.9 : 0.4)),
-              ),
-            );
-          }).toList(),
+        Padding(
+          padding: EdgeInsets.only(top: size.height * 0.015),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: image.asMap().entries.map((entry) {
+              return GestureDetector(
+                onTap: () => _controller.animateToPage(entry.key),
+                child: Container(
+                  width: 10.0,
+                  height: 10.0,
+                  margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
+                  decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: (Theme.of(context).brightness == Brightness.dark
+                              ? Colors.white
+                              : Colors.black)
+                          .withOpacity(_current == entry.key ? 0.9 : 0.4)),
+                ),
+              );
+            }).toList(),
+          ),
         ),
       ]),
     );

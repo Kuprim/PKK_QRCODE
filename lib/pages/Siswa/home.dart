@@ -25,7 +25,6 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      //prima Ganteng banget
       key: _scaffoldKey,
       endDrawerEnableOpenDragGesture: false,
       drawer: Drawer(
@@ -152,7 +151,7 @@ class _HomeState extends State<Home> {
           children: [
             Padding(
               padding: EdgeInsets.only(
-                  left: size.width * 0.1, top: size.height * 0.1),
+                  left: size.width * 0.065, top: size.height * 0.03),
               child: Container(
                 child: Row(
                   children: [
@@ -163,7 +162,9 @@ class _HomeState extends State<Home> {
                       onTap: () => _scaffoldKey.currentState?.openDrawer(),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(left: size.width * 0.07),
+                      padding: EdgeInsets.only(
+                        top: size.height * 0.025,
+                        left: size.width * 0.07),
                       child: Container(
                         height: size.height * 0.09,
                         width: size.width * 0.7,
@@ -195,7 +196,7 @@ class _HomeState extends State<Home> {
             ),
             Padding(
               padding: EdgeInsets.only(
-                  left: size.width * 0.1, top: size.height * 0.04),
+                  left: size.width * 0.1, top: size.height * 0),
               child: Container(
                 child: Row(
                   children: [
@@ -217,8 +218,8 @@ class _HomeState extends State<Home> {
                     Padding(
                       padding: EdgeInsets.only(left: 20),
                       child: Container(
-                        height: size.height * 0.1,
-                        width: size.width * 0.2,
+                        height: size.height * 0.09,
+                        width: size.width * 0.25,
                         child: Image(
                           image: AssetImage("assets/images/profpic.png"),
                           fit: BoxFit.fill,
@@ -241,7 +242,7 @@ class _HomeState extends State<Home> {
               ),
             ),
             Container(
-              height: size.height * 0.6,
+              height: size.height * 0.27,
               child: const CarouselHome(),
             ),
             GestureDetector(
@@ -258,6 +259,7 @@ class _HomeState extends State<Home> {
                   left: size.width * 0.06,
                   bottom: size.height * 0.09),
                 child: Container(
+                  //height: size.height * 0.4,
                   child: Image(
                     image: AssetImage("assets/images/qrsmk.png"),
                   ),
