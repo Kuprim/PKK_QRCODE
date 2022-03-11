@@ -1,8 +1,10 @@
+import 'package:absensi_qr/pages/Guru/homeguru.dart';
 import 'package:absensi_qr/pages/Guru/inputjadwal.dart';
 import 'package:absensi_qr/pages/Siswa/confirmasipage.dart';
 import 'package:absensi_qr/pages/Siswa/home.dart';
 import 'package:absensi_qr/pages/login.dart';
 import 'package:absensi_qr/pages/welcomepage.dart';
+import 'package:absensi_qr/widgets/Guru/navbar_guru.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

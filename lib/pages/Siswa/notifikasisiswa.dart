@@ -1,16 +1,16 @@
 import 'package:absensi_qr/constants/const.dart';
-import 'package:absensi_qr/dummy/isi_riwayat.dart';
+import 'package:absensi_qr/dummy/isi_riwayat_siswa.dart';
 import 'package:absensi_qr/widgets/card_notifikasi.dart';
 import 'package:flutter/material.dart';
 
-class Notifikasi extends StatefulWidget {
-  const Notifikasi({Key? key}) : super(key: key);
+class NotifikasiSiswa extends StatefulWidget {
+  const NotifikasiSiswa({Key? key}) : super(key: key);
 
   @override
-  _NotifikasiState createState() => _NotifikasiState();
+  _NotifikasiSiswaState createState() => _NotifikasiSiswaState();
 }
 
-class _NotifikasiState extends State<Notifikasi> {
+class _NotifikasiSiswaState extends State<NotifikasiSiswa> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;

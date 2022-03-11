@@ -1,16 +1,16 @@
 import 'package:absensi_qr/constants/const.dart';
-import 'package:absensi_qr/dummy/isi_riwayat.dart';
-import 'package:absensi_qr/widgets/Siswa/card_riwayat.dart';
+import 'package:absensi_qr/dummy/isi_riwayat_siswa.dart';
+import 'package:absensi_qr/widgets/card_notifikasi.dart';
 import 'package:flutter/material.dart';
 
-class RiwayatAbsen extends StatefulWidget {
-  const RiwayatAbsen({Key? key}) : super(key: key);
+class NotifikasiGuru extends StatefulWidget {
+  const NotifikasiGuru({Key? key}) : super(key: key);
 
   @override
-  _RiwayatAbsenState createState() => _RiwayatAbsenState();
+  _NotifikasiGuruState createState() => _NotifikasiGuruState();
 }
 
-class _RiwayatAbsenState extends State<RiwayatAbsen> {
+class _NotifikasiGuruState extends State<NotifikasiGuru> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -29,7 +29,7 @@ class _RiwayatAbsenState extends State<RiwayatAbsen> {
                       height: size.height * 0.25,
                       decoration: const BoxDecoration(
                         image: DecorationImage(
-                            image: AssetImage("assets/images/riwayat.png"),
+                            image: AssetImage("assets/images/notifikasi.png"),
                             fit: BoxFit.fill),
                       ),
                     ),
@@ -41,18 +41,9 @@ class _RiwayatAbsenState extends State<RiwayatAbsen> {
                       children: [
                         Container(
                           child: const Text(
-                            "Riwayat Aktivitas ",
+                            "Notifikasi",
                             style: TextStyle(
-                                fontSize: 25,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Poppins'),
-                          ),
-                        ),
-                        Container(
-                          child: const Text(
-                            "Absensi",
-                            style: TextStyle(
-                                fontSize: 25,
+                                fontSize: 30,
                                 fontWeight: FontWeight.bold,
                                 fontFamily: 'Poppins'),
                           ),
@@ -70,7 +61,7 @@ class _RiwayatAbsenState extends State<RiwayatAbsen> {
                 borderRadius: BorderRadius.circular(30),
                 color: Color(kFourthColor),
               ),
-              child: IsiRiwayat(),
+              child: CardNotifikasi(),
             )
           ],
         ),

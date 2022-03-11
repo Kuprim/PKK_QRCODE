@@ -3,24 +3,25 @@
 import 'package:absensi_qr/constants/const.dart';
 import 'package:flutter/material.dart';
 
-class CardRiwayatSiswa extends StatefulWidget {
-  const CardRiwayatSiswa(
+class CardRiwayatGuru extends StatefulWidget {
+  const CardRiwayatGuru(
       {Key? key,
       required this.gambar,
-      required this.kelas,
+      required this.judul,
       required this.matapelajaran,
       required this.jam,
       required this.hari,
-      required this.tanggal})
+      required this.tanggal,
+      required this.totalAbsen})
       : super(key: key);
 
-  final String gambar, kelas, matapelajaran, jam, hari, tanggal;
+  final String gambar, judul, matapelajaran, jam, hari, tanggal, totalAbsen;
 
   @override
-  _CardRiwayatSiswaState createState() => _CardRiwayatSiswaState();
+  _CardRiwayatGuruState createState() => _CardRiwayatGuruState();
 }
 
-class _CardRiwayatSiswaState extends State<CardRiwayatSiswa> {
+class _CardRiwayatGuruState extends State<CardRiwayatGuru> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -37,6 +38,7 @@ class _CardRiwayatSiswaState extends State<CardRiwayatSiswa> {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30)),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 13),
@@ -55,7 +57,7 @@ class _CardRiwayatSiswaState extends State<CardRiwayatSiswa> {
                         // ignore: prefer_const_literals_to_create_immutables
                         children: [
                           Text(
-                            widget.kelas,
+                            widget.judul,
                             style: TextStyle(
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w700,
@@ -68,23 +70,30 @@ class _CardRiwayatSiswaState extends State<CardRiwayatSiswa> {
                               fontWeight: FontWeight.w700,
                             ),
                           ),
-                           Text(
+                          Text(
+                            widget.totalAbsen,
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: size.width * 0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        // ignore: prefer_const_literals_to_create_immutables
+                        children: [
+                          Text(
                             widget.jam,
                             style: TextStyle(
                                 fontFamily: 'Poppins',
                                 fontWeight: FontWeight.w700,
                                 color: Color(kThirdColor)),
                           ),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: size.width * 0.1),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        // ignore: prefer_const_literals_to_create_immutables
-                        children: [
-                           Text(
+                          Text(
                             widget.hari,
                             style: TextStyle(
                               fontFamily: 'Poppins',
@@ -92,7 +101,7 @@ class _CardRiwayatSiswaState extends State<CardRiwayatSiswa> {
                               color: Color(kThirdColor),
                             ),
                           ),
-                           Text(
+                          Text(
                             widget.tanggal,
                             style: TextStyle(
                               fontFamily: 'Poppins',

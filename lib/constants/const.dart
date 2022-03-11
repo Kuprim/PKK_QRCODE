@@ -5,3 +5,4 @@ const kSecondColor = (0xFF7FC5FF);
 const kThirdColor = (0xFF447FB0);
 const kFourthColor = (0xFFF3F2F2);
 const kFifthColor = (0xFFC4C4C4);
+const kRedColor = (0xFF890F0D);

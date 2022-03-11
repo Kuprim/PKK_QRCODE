@@ -1,4 +1,8 @@
 import 'package:absensi_qr/constants/const.dart';
+import 'package:absensi_qr/pages/Guru/homeguru.dart';
+import 'package:absensi_qr/pages/Guru/notifikasiguru.dart';
+import 'package:absensi_qr/pages/Guru/riwayatguru.dart';
+import 'package:absensi_qr/pages/Guru/riwayatguru.dart';
 import 'package:absensi_qr/pages/Siswa/home.dart';
 import 'package:absensi_qr/pages/Siswa/notifikasisiswa.dart';
 import 'package:absensi_qr/pages/Siswa/riwayatsiswa.dart';
@@ -6,20 +10,20 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class NavbarQr extends StatefulWidget {
-  const NavbarQr({ Key? key }) : super(key: key);
+class NavbarGuru extends StatefulWidget {
+  const NavbarGuru({ Key? key }) : super(key: key);
 
   @override
-  _NavbarQrState createState() => _NavbarQrState();
+  _NavbarGuruState createState() => _NavbarGuruState();
 }
 
-class _NavbarQrState extends State<NavbarQr> {
+class _NavbarGuruState extends State<NavbarGuru> {
 
   int currentIndex = 1;
   final screens = [
-    RiwayatAbsenSiswa(),
-    Home(),
-    NotifikasiSiswa()
+    RiwayatAbsenGuru(),
+    HomeGuru(),
+    NotifikasiGuru()
   ];
 
   @override

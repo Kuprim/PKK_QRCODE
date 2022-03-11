@@ -1,23 +1,26 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, sized_box_for_whitespace, avoid_unnecessary_containers, deprecated_member_use
 
 import 'package:absensi_qr/constants/const.dart';
+import 'package:absensi_qr/pages/Guru/inputjadwal.dart';
 import 'package:absensi_qr/pages/login.dart';
 import 'package:absensi_qr/pages/profilpage.dart';
 import 'package:absensi_qr/pages/Siswa/scan_qr.dart';
 import 'package:absensi_qr/pages/settings.dart';
+import 'package:absensi_qr/widgets/Guru/carousel_guru.dart';
+import 'package:absensi_qr/widgets/Guru/list_absen_home_guru.dart';
 import 'package:absensi_qr/widgets/Siswa/carousel_siswa.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+class HomeGuru extends StatefulWidget {
+  const HomeGuru({Key? key}) : super(key: key);
 
   @override
-  _HomeState createState() => _HomeState();
+  _HomeGuruState createState() => _HomeGuruState();
 }
 
-class _HomeState extends State<Home> {
+class _HomeGuruState extends State<HomeGuru> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   final TextEditingController searchcontroller = TextEditingController();
 
@@ -124,7 +127,9 @@ class _HomeState extends State<Home> {
               ),
             ),
             GestureDetector(
-              onTap: (){Get.offAll(Login());},
+              onTap: () {
+                Get.offAll(Login());
+              },
               child: Container(
                 height: size.height * 0.15,
                 decoration: BoxDecoration(
@@ -163,8 +168,7 @@ class _HomeState extends State<Home> {
                     ),
                     Padding(
                       padding: EdgeInsets.only(
-                        top: size.height * 0.025,
-                        left: size.width * 0.07),
+                          top: size.height * 0.025, left: size.width * 0.07),
                       child: Container(
                         height: size.height * 0.09,
                         width: size.width * 0.7,
@@ -195,8 +199,8 @@ class _HomeState extends State<Home> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(
-                  left: size.width * 0.1, top: size.height * 0),
+              padding:
+                  EdgeInsets.only(left: size.width * 0.1, top: size.height * 0),
               child: Container(
                 child: Row(
                   children: [
@@ -208,7 +212,7 @@ class _HomeState extends State<Home> {
                     Padding(
                       padding: EdgeInsets.only(left: size.width * 0.09),
                       child: Text(
-                        "WELCOME, User Siswa",
+                        "WELCOME, User Guru",
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
@@ -219,7 +223,7 @@ class _HomeState extends State<Home> {
                       padding: EdgeInsets.only(left: 0),
                       child: Container(
                         height: size.height * 0.09,
-                        width: size.width * 0.17,
+                        width: size.width * 0.20,
                         child: Image(
                           image: AssetImage("assets/images/profpic.png"),
                           fit: BoxFit.fill,
@@ -243,28 +247,29 @@ class _HomeState extends State<Home> {
             ),
             Container(
               height: size.height * 0.27,
-              child: const CarouselHome(),
+              child: const CarouselGuru(),
             ),
             GestureDetector(
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (c) => ScanQr(),
+                    builder: (c) => InputJadwal(),
                   ),
                 );
               },
               child: Padding(
-                padding: EdgeInsets.only(
-                  left: size.width * 0.06,
-                  bottom: size.height * 0.09),
+                padding: EdgeInsets.only(bottom: size.height * 0.09),
                 child: Container(
                   //height: size.height * 0.4,
                   child: Image(
-                    image: AssetImage("assets/images/qrsmk.png"),
+                    image: AssetImage("assets/images/tambah_absen_guru.png"),
                   ),
                 ),
               ),
+            ),
+            Container(
+              child: ListAbsenGuru(),
             )
           ],
         ),

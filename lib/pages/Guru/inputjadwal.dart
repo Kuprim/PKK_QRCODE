@@ -1,7 +1,9 @@
 // ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors
 
 import 'package:absensi_qr/constants/const.dart';
+import 'package:absensi_qr/pages/Guru/homeguru.dart';
 import 'package:absensi_qr/widgets/Guru/form_input_jadwal.dart';
+import 'package:absensi_qr/widgets/Guru/navbar_guru.dart';
 import 'package:flutter/material.dart';
 
 class InputJadwal extends StatefulWidget {
@@ -74,6 +76,33 @@ class _InputJadwalState extends State<InputJadwal> {
             Center(
               child: Container(
                 child: FormJadwalGuru(),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(
+                  top: size.height * 0.06, left: size.width * 0.1, bottom: size.height * 0.03),
+              child: Container(
+                height: size.height * 0.07,
+                width: size.width * 0.36,
+                decoration: BoxDecoration(color: Color(kThirdColor), borderRadius: BorderRadius.circular(20)),
+                child: TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (c) => NavbarGuru(),
+                  ),
+                );
+                  },
+                  child: Text(
+                    "< Back",
+                    style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        fontFamily: 'Poppins'),
+                  ),
+                ),
               ),
             )
           ],
