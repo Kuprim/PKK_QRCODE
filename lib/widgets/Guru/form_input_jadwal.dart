@@ -37,11 +37,13 @@ class _FormJadwalGuruState extends State<FormJadwalGuru> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(top: size.height * 0.025),
+                padding: EdgeInsets.only(top: size.height * 0.01),
                 child: Container(
-                  height: size.height * 0.06,
+                  height: size.height * 0.04,
                   width: size.width * 0.7,
                   child: TextFormField(
+                    textAlign: TextAlign.left,
+                    textAlignVertical: TextAlignVertical.bottom,
                     decoration: InputDecoration(
                       focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.white),
@@ -56,7 +58,7 @@ class _FormJadwalGuruState extends State<FormJadwalGuru> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(top: size.height * 0.055),
+                padding: EdgeInsets.only(top: size.height * 0.015),
                 child: Container(
                   child: Text(
                     "Nama Mapel",
@@ -68,11 +70,13 @@ class _FormJadwalGuruState extends State<FormJadwalGuru> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(top: size.height * 0.025),
+                padding: EdgeInsets.only(top: size.height * 0.01),
                 child: Container(
-                  height: size.height * 0.06,
+                  height: size.height * 0.04,
                   width: size.width * 0.7,
                   child: TextFormField(
+                    textAlign: TextAlign.left,
+                    textAlignVertical: TextAlignVertical.bottom,
                     decoration: InputDecoration(
                       focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.white),
@@ -81,16 +85,16 @@ class _FormJadwalGuruState extends State<FormJadwalGuru> {
                           borderSide: BorderSide(color: Colors.white)),
                       fillColor: Colors.white,
                       filled: true,
-                      hintText: "BAHASA INDONESIA",
+                      hintText: "Bahasa Indonesia",
                     ),
                   ),
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(top: size.height * 0.055),
+                padding: EdgeInsets.only(top: size.height * 0.015),
                 child: Container(
                   child: Text(
-                    "Jam Pelajaran",
+                    "Jadwal Pelajaran",
                     style: TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
@@ -99,11 +103,13 @@ class _FormJadwalGuruState extends State<FormJadwalGuru> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(top: size.height * 0.025),
+                padding: EdgeInsets.only(top: size.height * 0.01),
                 child: Container(
-                  height: size.height * 0.06,
+                  height: size.height * 0.04,
                   width: size.width * 0.7,
                   child: TextFormField(
+                    textAlign: TextAlign.left,
+                    textAlignVertical: TextAlignVertical.bottom,
                     decoration: InputDecoration(
                       focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.white),
@@ -112,13 +118,46 @@ class _FormJadwalGuruState extends State<FormJadwalGuru> {
                           borderSide: BorderSide(color: Colors.white)),
                       fillColor: Colors.white,
                       filled: true,
-                      hintText: "08.30 - 10.30",
+                      hintText: "Senin, 08 Maret 2022",
                     ),
                   ),
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(top: size.height * 0.055),
+                padding: EdgeInsets.only(top: size.height * 0.015),
+                child: Container(
+                  child: Text(
+                    "Jam Absensi",
+                    style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Poppins'),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: size.height * 0.01),
+                child: Container(
+                  height: size.height * 0.04,
+                  width: size.width * 0.7,
+                  child: TextFormField(
+                    textAlign: TextAlign.left,
+                    textAlignVertical: TextAlignVertical.bottom,
+                    decoration: InputDecoration(
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white)),
+                      fillColor: Colors.white,
+                      filled: true,
+                      hintText: "04.20 - 10.00",
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: size.height * 0.015),
                 child: Container(
                   child: Text(
                     "Deskripsi",
@@ -130,11 +169,13 @@ class _FormJadwalGuruState extends State<FormJadwalGuru> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(top: size.height * 0.025),
+                padding: EdgeInsets.only(top: size.height * 0.01),
                 child: Container(
-                  height: size.height * 0.06,
+                  height: size.height * 0.04,
                   width: size.width * 0.7,
                   child: TextFormField(
+                    textAlign: TextAlign.left,
+                    textAlignVertical: TextAlignVertical.bottom,
                     decoration: InputDecoration(
                       focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.white),
@@ -143,12 +184,11 @@ class _FormJadwalGuruState extends State<FormJadwalGuru> {
                           borderSide: BorderSide(color: Colors.white)),
                       fillColor: Colors.white,
                       filled: true,
-                      hintText: "Isi Pesan Atau Deskripsi",
+                      hintText: "Isi pesan atau deskripsi",
                     ),
                   ),
                 ),
               ),
-              
             ],
           ),
         ),

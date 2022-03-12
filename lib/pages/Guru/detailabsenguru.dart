@@ -21,7 +21,7 @@ class _DetailAbsenGuruState extends State<DetailAbsenGuru> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: EdgeInsets.only(top: size.height * 0.07),
+              padding: EdgeInsets.only(top: size.height * 0.06),
               child: Center(
                 child: Container(
                   child: Column(
@@ -37,7 +37,7 @@ class _DetailAbsenGuruState extends State<DetailAbsenGuru> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.only(top: 20),
+                        padding: EdgeInsets.only(top: 10),
                         child: Container(
                           height: size.height * 0.05,
                           width: size.width * 0.7,
@@ -60,7 +60,7 @@ class _DetailAbsenGuruState extends State<DetailAbsenGuru> {
             ),
             Padding(
               padding: EdgeInsets.only(
-                  left: size.width * 0.1, top: size.height * 0.06),
+                  left: size.width * 0.1, top: size.height * 0.04),
               child: Container(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -76,7 +76,7 @@ class _DetailAbsenGuruState extends State<DetailAbsenGuru> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(top: 20),
+                      padding: EdgeInsets.only(top: 10),
                       child: Container(
                         height: size.height * 0.05,
                         width: size.width * 0.7,
@@ -84,11 +84,14 @@ class _DetailAbsenGuruState extends State<DetailAbsenGuru> {
                           color: Color(kFourthColor),
                         ),
                         child: Padding(
-                          padding: EdgeInsets.only(left: 10),
+                          padding: EdgeInsets.only(left: 10, top: 10),
                           child: Text(
                             "Bahasa Indonesia",
-                            style:
-                                TextStyle(fontFamily: 'Poppins', fontSize: 15),
+                            style:(
+                              TextStyle(fontFamily: 'Poppins', fontSize: 15)
+
+                            )
+                                
                           ),
                         ),
                       ),
@@ -115,7 +118,7 @@ class _DetailAbsenGuruState extends State<DetailAbsenGuru> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(top: 20),
+                      padding: EdgeInsets.only(top: 10),
                       child: Container(
                         height: size.height * 0.05,
                         width: size.width * 0.7,
@@ -123,7 +126,7 @@ class _DetailAbsenGuruState extends State<DetailAbsenGuru> {
                           color: Color(kFourthColor),
                         ),
                         child: Padding(
-                          padding: EdgeInsets.only(left: 10),
+                          padding: EdgeInsets.only(left: 10, top: 10),
                           child: Text(
                             "Isi Pesan Atau Deskripsi",
                             style:
@@ -154,11 +157,14 @@ class _DetailAbsenGuruState extends State<DetailAbsenGuru> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(top: 20),
+                      padding: EdgeInsets.only(top: 10),
                       child: Container(
                         height: size.height * 0.15,
                         width: size.width * 0.5,
                         decoration: BoxDecoration(
+                          border: Border(
+                                top: BorderSide(
+                                    width: 5, color: Color(kFirstColor))),
                           color: Color(kFourthColor),
                         ),
                         child: Padding(
@@ -200,11 +206,11 @@ class _DetailAbsenGuruState extends State<DetailAbsenGuru> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: size.height * 0.05),
+              padding: EdgeInsets.only(top: size.height * 0.03),
               child: Center(
                 child: Container(
-                  height: size.height * 0.55,
-                  width: size.width * 0.9,
+                  height: size.height * 0.45,
+                  width: size.width * 0.85,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadiusDirectional.circular(20),
                       color: Color(kFirstColor)),
@@ -234,75 +240,84 @@ class _DetailAbsenGuruState extends State<DetailAbsenGuru> {
                           ],
                         ),
                       ),
-                      Container(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            Column(
-                              children: [
-                                Container(
-                                  height: size.height * 0.35,
-                                  width: size.width * 0.4,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10),
-                                      color: Colors.white),
-                                  child: Center(
-                                    child: Text(
-                                      "15",
-                                      style: TextStyle(
-                                          fontFamily: 'Poppins',
-                                          fontSize: 100,
-                                          fontWeight: FontWeight.bold,
-                                          color: Color(kRedColor)),
+                      Padding(
+                        padding: EdgeInsets.only(top: size.height * 0.02),
+                        child: Container(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Column(
+                                children: [
+                                  Container(
+                                    height: size.height * 0.25,
+                                    width: size.width * 0.35,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        color: Colors.white),
+                                    child: Center(
+                                      child: Text(
+                                        "15",
+                                        style: TextStyle(
+                                            fontFamily: 'Poppins',
+                                            fontSize: 100,
+                                            fontWeight: FontWeight.bold,
+                                            color: Color(kRedColor)),
+                                      ),
                                     ),
                                   ),
+                                  Padding(
+                                    padding: EdgeInsets.only(top: size.height * 0.02),
+                                    child: Container(
+                                    child: Center(
+                                      child: Text(
+                                        "Terlambat",
+                                        style: TextStyle(
+                                            fontFamily: 'Poppins',
+                                            fontSize: 25,
+                                            fontWeight: FontWeight.bold,
+                                            color: Color(kRedColor)),
+                                      ),
+                                    ),
                                 ),
-                                Container(
-                                child: Center(
-                                  child: Text(
-                                    "Terlambat",
-                                    style: TextStyle(
-                                        fontFamily: 'Poppins',
-                                        fontSize: 25,
-                                        fontWeight: FontWeight.bold,
-                                        color: Color(kRedColor)),
                                   ),
-                                ),
+                                ],
                               ),
-                              ],
-                            ),
-                            Column(
-                              children: [
-                                Container(
-                                  height: size.height * 0.35,
-                                  width: size.width * 0.4,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10),
-                                      color: Colors.white),
-                                  child: Center(
+                              Column(
+                                children: [
+                                  Container(
+                                    height: size.height * 0.25,
+                                    width: size.width * 0.35,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        color: Colors.white),
+                                    child: Center(
+                                      child: Text(
+                                        "36",
+                                        style: TextStyle(
+                                            fontFamily: 'Poppins',
+                                            fontSize: 100,
+                                            fontWeight: FontWeight.bold,
+                                            color: Color(kThirdColor)),
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.only(top: size.height * 0.02),
+                                    child: Container(
                                     child: Text(
-                                      "36",
+                                      "Total",
                                       style: TextStyle(
                                           fontFamily: 'Poppins',
-                                          fontSize: 100,
+                                          fontSize: 25,
                                           fontWeight: FontWeight.bold,
                                           color: Color(kThirdColor)),
                                     ),
-                                  ),
                                 ),
-                                Container(
-                                child: Text(
-                                  "Total",
-                                  style: TextStyle(
-                                      fontFamily: 'Poppins',
-                                      fontSize: 25,
-                                      fontWeight: FontWeight.bold,
-                                      color: Color(kThirdColor)),
-                                ),
+                                  )
+                                ],
                               )
-                              ],
-                            )
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ],
@@ -312,7 +327,7 @@ class _DetailAbsenGuruState extends State<DetailAbsenGuru> {
             ),
              Padding(
               padding: EdgeInsets.only(
-                  top: size.height * 0.06, left: size.width * 0.1, bottom: size.height * 0.04),
+                  top: size.height * 0.03, left: size.width * 0.08, bottom: size.height * 0.04),
               child: Container(
                 height: size.height * 0.07,
                 width: size.width * 0.3,

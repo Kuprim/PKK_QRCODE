@@ -24,10 +24,10 @@ class _RiwayatAbsenGuruState extends State<RiwayatAbsenGuru> {
                 children: [
                   Padding(
                     padding: EdgeInsets.only(
-                        top: size.height * 0.1, left: size.width * 0.03),
+                        top: size.height * 0.05, left: size.width * 0.05),
                     child: Container(
                       width: size.width * 0.4,
-                      height: size.height * 0.25,
+                      height: size.height * 0.2,
                       decoration: const BoxDecoration(
                         image: DecorationImage(
                             image: AssetImage("assets/images/Group 26.png"),
@@ -36,7 +36,9 @@ class _RiwayatAbsenGuruState extends State<RiwayatAbsenGuru> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(top: 80),
+                    padding: EdgeInsets.only(
+                      left: size.width * 0.03,
+                      top: size.height * 0.04),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -49,13 +51,16 @@ class _RiwayatAbsenGuruState extends State<RiwayatAbsenGuru> {
                                 fontFamily: 'Poppins'),
                           ),
                         ),
-                        Container(
-                          child: const Text(
-                            "Absensi",
-                            style: TextStyle(
-                                fontSize: 25,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Poppins'),
+                        Padding(
+                          padding: EdgeInsets.only(left: size.width * 0.1),
+                          child: Container(
+                            child: const Text(
+                              "Absensi",
+                              style: TextStyle(
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Poppins'),
+                            ),
                           ),
                         ),
                       ],
@@ -64,14 +69,17 @@ class _RiwayatAbsenGuruState extends State<RiwayatAbsenGuru> {
                 ],
               ),
             ),
-            Container(
-              height: size.height * 0.7,
-              width: size.width * 0.85,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                color: Color(kFirstColor),
+            Padding(
+              padding: EdgeInsets.only(top: size.height * 0.03),
+              child: Container(
+                height: size.height * 0.6,
+                width: size.width * 0.85,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  color: Color(kFirstColor),
+                ),
+                child: IsiRiwayatGuru(),
               ),
-              child: IsiRiwayatGuru(),
             )
           ],
         ),

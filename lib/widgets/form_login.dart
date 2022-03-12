@@ -8,6 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:get/get.dart';
 
+import 'Guru/navbar_guru.dart';
+
 class FormLogin extends StatefulWidget {
   const FormLogin({
     key,
@@ -217,7 +219,7 @@ class _FormLoginState extends State<FormLogin> {
                 color: Color(kThirdColor)),
             child: TextButton(
               onPressed: () {
-                Get.off(NavbarQr());
+                Get.off(NavbarGuru());
               },
               child: Text(
                 "Login",

@@ -42,9 +42,11 @@ class _InputJadwalState extends State<InputJadwal> {
                     Padding(
                       padding: EdgeInsets.only(top: size.height * 0),
                       child: Container(
-                        height: size.height * 0.07,
-                        width: size.width * 0.36,
-                        decoration: BoxDecoration(color: Color(kThirdColor)),
+                        height: size.height * 0.06,
+                        width: size.width * 0.3,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Color(kThirdColor)),
                         child: TextButton(
                           onPressed: () {
                             //
@@ -65,8 +67,8 @@ class _InputJadwalState extends State<InputJadwal> {
               ),
             ),
             Container(
-              width: size.width * 0.6,
-              height: size.height * 0.4,
+              width: size.width * 0.7,
+              height: size.height * 0.3,
               decoration: const BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage("assets/images/jadwal.png"),
@@ -75,6 +77,8 @@ class _InputJadwalState extends State<InputJadwal> {
             ),
             Center(
               child: Container(
+                width: size.width * 0.9,
+                height: size.height * 0.5,
                 child: FormJadwalGuru(),
               ),
             ),
@@ -82,8 +86,8 @@ class _InputJadwalState extends State<InputJadwal> {
               padding: EdgeInsets.only(
                   top: size.height * 0.06, left: size.width * 0.1, bottom: size.height * 0.03),
               child: Container(
-                height: size.height * 0.07,
-                width: size.width * 0.36,
+                height: size.height * 0.06,
+                width: size.width * 0.25,
                 decoration: BoxDecoration(color: Color(kThirdColor), borderRadius: BorderRadius.circular(20)),
                 child: TextButton(
                   onPressed: () {

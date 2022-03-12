@@ -29,7 +29,7 @@ class _CardRiwayatGuruState extends State<CardRiwayatGuru> {
       child: Column(
         children: [
           Padding(
-            padding: EdgeInsets.only(top: size.height * 0.05),
+            padding: EdgeInsets.only(top: size.height * 0.04),
             child: Container(
               height: size.height * 0.15,
               width: size.width * 0.8,
@@ -41,9 +41,10 @@ class _CardRiwayatGuruState extends State<CardRiwayatGuru> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(left: 13),
+                      padding: EdgeInsets.only(left: size.width * 0.01),
                       child: Container(
                         height: size.height * 0.1,
+                        width:size.width * 0.1 ,
                         child: Image(
                           image: AssetImage(widget.gambar),
                         ),
@@ -87,13 +88,6 @@ class _CardRiwayatGuruState extends State<CardRiwayatGuru> {
                         // ignore: prefer_const_literals_to_create_immutables
                         children: [
                           Text(
-                            widget.jam,
-                            style: TextStyle(
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w700,
-                                color: Color(kThirdColor)),
-                          ),
-                          Text(
                             widget.hari,
                             style: TextStyle(
                               fontFamily: 'Poppins',
@@ -101,6 +95,14 @@ class _CardRiwayatGuruState extends State<CardRiwayatGuru> {
                               color: Color(kThirdColor),
                             ),
                           ),
+                          Text(
+                            widget.jam,
+                            style: TextStyle(
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w700,
+                                color: Color(kThirdColor)),
+                          ),
+                          
                           Text(
                             widget.tanggal,
                             style: TextStyle(
