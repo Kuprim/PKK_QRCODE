@@ -28,7 +28,7 @@ class _CardRiwayatSiswaState extends State<CardRiwayatSiswa> {
       child: Column(
         children: [
           Padding(
-            padding: EdgeInsets.only(top: size.height * 0.05),
+            padding: EdgeInsets.only(top: size.height * 0.04),
             child: Container(
               height: size.height * 0.15,
               width: size.width * 0.8,
@@ -41,14 +41,14 @@ class _CardRiwayatSiswaState extends State<CardRiwayatSiswa> {
                     Padding(
                       padding: const EdgeInsets.only(left: 13),
                       child: Container(
-                        height: size.height * 0.1,
+                        height: size.height * 0.075,
                         child: Image(
                           image: AssetImage(widget.gambar),
                         ),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 10),
+                      padding: const EdgeInsets.only(left: 20),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         crossAxisAlignment: CrossAxisAlignment.start,

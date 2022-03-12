@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors
 
 import 'package:absensi_qr/constants/const.dart';
+import 'package:absensi_qr/pages/categoryrole.dart';
 import 'package:absensi_qr/pages/login.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -157,7 +158,7 @@ class _CarouselWelcomeState extends State<CarouselWelcome> {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                    builder: (c) => Login(),
+                    builder: (c) => CategoryRole(),
                   ),
                 );
               },

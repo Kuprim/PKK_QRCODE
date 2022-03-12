@@ -18,6 +18,7 @@ class _ConfirmasiPageState extends State<ConfirmasiPage> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Stack(
           alignment: Alignment.center,
@@ -284,7 +285,9 @@ class _ConfirmasiPageState extends State<ConfirmasiPage> {
                             Column(
                               children: [
                                 Padding(
-                                  padding: EdgeInsets.only(top: size.height * 0.01, left: size.width * 0.18),
+                                  padding: EdgeInsets.only(
+                                      top: size.height * 0.01,
+                                      left: size.width * 0.18),
                                   child: Text(
                                     "Senin",
                                     style: TextStyle(
@@ -295,7 +298,9 @@ class _ConfirmasiPageState extends State<ConfirmasiPage> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsets.only(top: size.height * 0.002, left: size.width * 0.18),
+                                  padding: EdgeInsets.only(
+                                      top: size.height * 0.002,
+                                      left: size.width * 0.18),
                                   child: Text(
                                     "05 Maret 1998",
                                     style: TextStyle(
@@ -306,7 +311,9 @@ class _ConfirmasiPageState extends State<ConfirmasiPage> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsets.only(top: size.height * 0.001, left: size.width * 0.18),
+                                  padding: EdgeInsets.only(
+                                      top: size.height * 0.001,
+                                      left: size.width * 0.18),
                                   child: Text(
                                     "04.20 - 10.00",
                                     style: TextStyle(

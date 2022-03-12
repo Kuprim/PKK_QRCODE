@@ -23,10 +23,10 @@ class _RiwayatAbsenSiswaState extends State<RiwayatAbsenSiswa> {
                 children: [
                   Padding(
                     padding: EdgeInsets.only(
-                        top: size.height * 0.1, left: size.width * 0.03),
+                        top: size.height * 0.05, left: size.width * 0.03),
                     child: Container(
                       width: size.width * 0.4,
-                      height: size.height * 0.25,
+                      height: size.height * 0.2,
                       decoration: const BoxDecoration(
                         image: DecorationImage(
                             image: AssetImage("assets/images/riwayat.png"),
@@ -35,7 +35,7 @@ class _RiwayatAbsenSiswaState extends State<RiwayatAbsenSiswa> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(top: 80),
+                    padding: EdgeInsets.only(top: size.height * 0.03),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -63,14 +63,17 @@ class _RiwayatAbsenSiswaState extends State<RiwayatAbsenSiswa> {
                 ],
               ),
             ),
-            Container(
-              height: size.height * 0.7,
-              width: size.width * 0.85,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                color: Color(kFourthColor),
+            Padding(
+              padding: EdgeInsets.only(top : size.height * 0.03),
+              child: Container(
+                height: size.height * 0.6,
+                width: size.width * 0.85,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  color: Color(kFourthColor),
+                ),
+                child: IsiRiwayatSiswa(),
               ),
-              child: IsiRiwayatSiswa(),
             )
           ],
         ),

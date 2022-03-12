@@ -23,10 +23,10 @@ class _NotifikasiSiswaState extends State<NotifikasiSiswa> {
                 children: [
                   Padding(
                     padding: EdgeInsets.only(
-                        top: size.height * 0.1, left: size.width * 0.03),
+                        top: size.height * 0.05, left: size.width * 0.11),
                     child: Container(
                       width: size.width * 0.4,
-                      height: size.height * 0.25,
+                      height: size.height * 0.2,
                       decoration: const BoxDecoration(
                         image: DecorationImage(
                             image: AssetImage("assets/images/notifikasi.png"),
@@ -35,7 +35,9 @@ class _NotifikasiSiswaState extends State<NotifikasiSiswa> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(top: 80),
+                    padding: EdgeInsets.only(
+                      left: size.width * 0.02,
+                      top: size.height * 0.04),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -55,8 +57,8 @@ class _NotifikasiSiswaState extends State<NotifikasiSiswa> {
               ),
             ),
             Container(
-              height: size.height * 0.7,
-              width: size.width * 0.85,
+              height: size.height * 0.65,
+              width: size.width * 0.9,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
                 color: Color(kFourthColor),

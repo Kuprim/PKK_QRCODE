@@ -30,42 +30,45 @@ class _HomeState extends State<Home> {
       drawer: Drawer(
         child: ListView(
           children: [
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (c) => ProfilPage(),
-                  ),
-                );
-              },
-              child: Row(
-                children: [
-                  Container(
-                    height: size.height * 0.27,
-                    width: size.width * 0.3,
-                    child: Image(
-                      image: AssetImage("assets/images/profpic.png"),
+            Padding(
+              padding: EdgeInsets.only(top: size.height * 0),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (c) => ProfilPage(),
                     ),
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(bottom: 20),
-                        child: Text(
-                          "Your Name",
-                          style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w700,
-                              fontFamily: 'Poppins'),
-                        ),
+                  );
+                },
+                child: Row(
+                  children: [
+                    Container(
+                      height: size.height * 0.25,
+                      width: size.width * 0.3,
+                      child: Image(
+                        image: AssetImage("assets/images/profpic.png"),
                       ),
-                      Text("Status")
-                    ],
-                  )
-                ],
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(bottom: 20),
+                          child: Text(
+                            "Your Name",
+                            style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w700,
+                                fontFamily: 'Poppins'),
+                          ),
+                        ),
+                        Text("Status")
+                      ],
+                    )
+                  ],
+                ),
               ),
             ),
             Divider(
@@ -76,22 +79,29 @@ class _HomeState extends State<Home> {
               thickness: 4,
             ),
             Padding(
-              padding: EdgeInsets.only(top: 20),
+              padding: EdgeInsets.only(
+                right: size.width * 0.07,
+                top: size.height * 0.03),
               child: Container(
-                height: size.height * 0.15,
+                height: size.height * 0.1,
                 decoration: BoxDecoration(
                   color: Color(kThirdColor),
                   borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(50),
-                      bottomRight: Radius.circular(50)),
+                      topRight: Radius.circular(100),
+                      bottomRight: Radius.circular(100)),
                 ),
-                child: Center(
-                  child: Text(
-                    "Dashboard",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w700),
+                child: Padding(
+                  padding: EdgeInsets.only(left: size.width * 0.1),
+                  child: Center(
+                    child: Text(
+                      "Dashboard",
+                      style: TextStyle(
+                        
+                        fontSize: 18,
+                          color: Colors.white,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w700),
+                    ),
                   ),
                 ),
               ),
@@ -106,7 +116,7 @@ class _HomeState extends State<Home> {
                 );
               },
               child: Container(
-                height: size.height * 0.15,
+                height: size.height * 0.1,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(50),
@@ -116,6 +126,7 @@ class _HomeState extends State<Home> {
                   child: Text(
                     "Settings",
                     style: TextStyle(
+                      fontSize: 18,
                         color: Color(kThirdColor),
                         fontFamily: 'Poppins',
                         fontWeight: FontWeight.w700),
@@ -126,7 +137,7 @@ class _HomeState extends State<Home> {
             GestureDetector(
               onTap: (){Get.offAll(Login());},
               child: Container(
-                height: size.height * 0.15,
+                height: size.height * 0.1,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(50),
@@ -136,6 +147,7 @@ class _HomeState extends State<Home> {
                   child: Text(
                     "Logout",
                     style: TextStyle(
+                      fontSize: 18,
                         color: Color(kRedColor),
                         fontFamily: 'Poppins',
                         fontWeight: FontWeight.w700),
