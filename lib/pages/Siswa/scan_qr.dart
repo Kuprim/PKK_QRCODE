@@ -4,12 +4,20 @@ import 'package:absensi_qr/constants/const.dart';
 import 'package:absensi_qr/pages/Siswa/confirmasipage.dart';
 import 'package:absensi_qr/widgets/Siswa/navbar_siswa.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 class ScanQr extends StatefulWidget {
   const ScanQr({Key? key}) : super(key: key);
 
   @override
   _ScanQrState createState() => _ScanQrState();
+}
+
+final imagePicker = ImagePicker();
+
+//open camera
+Future getImage() async {
+  final image = await imagePicker.getImage(source: ImageSource.camera);
 }
 
 class _ScanQrState extends State<ScanQr> {
@@ -64,13 +72,12 @@ class _ScanQrState extends State<ScanQr> {
                   height: size.height * 0.06,
                   width: size.width * 0.55,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Color(kThirdColor)
-                  ),
+                      borderRadius: BorderRadius.circular(10),
+                      color: Color(kThirdColor)),
                   child: Text(
                     "Scan QR Code",
                     style: TextStyle(
-                      color: Colors.white,
+                        color: Colors.white,
                         fontFamily: 'Poppins',
                         fontSize: 30,
                         fontWeight: FontWeight.bold),
@@ -85,12 +92,13 @@ class _ScanQrState extends State<ScanQr> {
                 padding: EdgeInsets.only(top: size.height * 0.05),
                 child: GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (c) => ConfirmasiPage(),
-                      ),
-                    );
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //     builder: (c) => ConfirmasiPage(),
+                    //   ),
+                    // );
+                    getImage();
                   },
                   child: Image(
                     image: AssetImage("assets/images/qrcode.png"),
