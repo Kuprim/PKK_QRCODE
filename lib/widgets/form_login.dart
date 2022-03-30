@@ -219,7 +219,7 @@ class _FormLoginState extends State<FormLogin> {
                 color: Color(kThirdColor)),
             child: TextButton(
               onPressed: () {
-                Get.off(NavbarGuru());
+                Get.off(NavbarQr());
               },
               child: Text(
                 "Login",

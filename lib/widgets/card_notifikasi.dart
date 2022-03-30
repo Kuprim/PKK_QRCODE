@@ -99,7 +99,7 @@ class _CardNotifikasiState extends State<CardNotifikasi> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(left: size.width * 0.1),
+                      padding: EdgeInsets.only(left: size.width * 0.07),
                       child: Container(
                         height: size.height * 0.3,
                         width: size.width * 0.2,
@@ -192,7 +192,7 @@ class _CardNotifikasiState extends State<CardNotifikasi> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(left: size.width * 0.1),
+                      padding: EdgeInsets.only(left: size.width * 0.07),
                       child: Container(
                         height: size.height * 0.3,
                         width: size.width * 0.2,
@@ -285,7 +285,7 @@ class _CardNotifikasiState extends State<CardNotifikasi> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(left: size.width * 0.1),
+                      padding: EdgeInsets.only(left: size.width * 0.07),
                       child: Container(
                         height: size.height * 0.3,
                         width: size.width * 0.2,

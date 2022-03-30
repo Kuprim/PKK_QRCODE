@@ -343,8 +343,8 @@ class _ConfirmasiPageState extends State<ConfirmasiPage> {
                             Get.off(NavbarQr());
                           },
                           child: Text(
-                            "Kirim",
-                            style: TextStyle(fontSize: 24, color: Colors.white),
+                            "absen",
+                            style: TextStyle(fontSize: 24, color: Colors.white, fontFamily: 'Poppins',),
                           ),
                         ),
                       ),

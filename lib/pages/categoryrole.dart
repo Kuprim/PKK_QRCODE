@@ -1,7 +1,9 @@
 // ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers
 
 import 'package:absensi_qr/constants/const.dart';
+import 'package:absensi_qr/pages/Guru/homeguru.dart';
 import 'package:absensi_qr/pages/login.dart';
+import 'package:absensi_qr/widgets/Guru/navbar_guru.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -52,7 +54,7 @@ class _CategoryRoleState extends State<CategoryRole> {
             ),
             GestureDetector(
               onTap: () => {
-                Get.off(Login())
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (c) => Login()))
               } ,
               child: Padding(
                 padding: EdgeInsets.only(
@@ -68,7 +70,7 @@ class _CategoryRoleState extends State<CategoryRole> {
             ),
             GestureDetector(
               onTap: () => {
-                Get.off(Login())
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (c) => NavbarGuru()))
               },
               child: Padding(
                 padding: EdgeInsets.only(
