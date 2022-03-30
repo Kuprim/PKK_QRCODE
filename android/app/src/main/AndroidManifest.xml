@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.absensi_qr">
+    <uses-permission android:name="android.permission.CAMERA" />
    <application
         android:label="absensi_qr"
         android:icon="@mipmap/ic_launcher">
