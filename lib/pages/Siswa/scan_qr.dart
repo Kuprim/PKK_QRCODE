@@ -5,6 +5,7 @@ import 'package:absensi_qr/pages/Siswa/confirmasipage.dart';
 import 'package:absensi_qr/widgets/Siswa/navbar_siswa.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:qrscan/qrscan.dart' as scanner;
 
 class ScanQr extends StatefulWidget {
   const ScanQr({Key? key}) : super(key: key);
@@ -13,12 +14,12 @@ class ScanQr extends StatefulWidget {
   _ScanQrState createState() => _ScanQrState();
 }
 
-final imagePicker = ImagePicker();
+// final imagePicker = ImagePicker();
 
-//open camera
-Future getImage() async {
-  final image = await imagePicker.getImage(source: ImageSource.camera);
-}
+// //open camera
+// Future getImage() async {
+//   final image = await imagePicker.getImage(source: ImageSource.camera);
+// }
 
 class _ScanQrState extends State<ScanQr> {
   @override
@@ -91,14 +92,10 @@ class _ScanQrState extends State<ScanQr> {
               Padding(
                 padding: EdgeInsets.only(top: size.height * 0.05),
                 child: GestureDetector(
-                  onTap: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //     builder: (c) => ConfirmasiPage(),
-                    //   ),
-                    // );
-                    getImage();
+                  onTap: () async {
+                    await scanner.scan();
+                    setState(() {});
+                    //getImage();
                   },
                   child: Image(
                     image: AssetImage("assets/images/qrcode.png"),
