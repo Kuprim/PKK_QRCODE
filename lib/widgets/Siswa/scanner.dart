@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 
@@ -12,26 +13,31 @@ class _ScannerState extends State<Scanner> {
   bool _flashOn = false;
   GlobalKey _qrKey = GlobalKey();
   late QRViewController _controller;
+
+  get result => null;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: Stack(
         children: <Widget>[
+          if (result != null)
+            Text(
+                'Barcode Type: ${describeEnum(result!.format)}   Data: ${result!.code}')
+          else
+            const Text('Scan a code'),
           QRView(
               key: _qrKey,
-              overlay: QrScannerOverlayShape(
-                borderColor: Colors.white
-              ),
-               onQRViewCreated: (QRViewController controller) {
-                 this._controller = controller;
-                 controller.scannedDataStream.listen((val) {
-                   if(mounted){
-                     _controller.dispose();
-                     Navigator.pop(context, val);
-                   }
-                 });
-               }),
+              overlay: QrScannerOverlayShape(borderColor: Colors.white),
+              onQRViewCreated: (QRViewController controller) {
+                this._controller = controller;
+                controller.scannedDataStream.listen((val) {
+                  if (mounted) {
+                    _controller.dispose();
+                    Navigator.pop(context, val);
+                  }
+                });
+              }),
           Align(
             alignment: Alignment.topCenter,
             child: Container(

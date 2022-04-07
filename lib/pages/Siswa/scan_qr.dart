@@ -109,7 +109,10 @@ class _ScanQrState extends State<ScanQr> {
   }
   Future _openscanner(BuildContext context) async{
     final result = await Navigator.push(context, MaterialPageRoute(builder: (c) => Scanner()));
-    _result = result;
+    if(result is String){
+      _result = result;
+    }
+    
   }
  
 }
