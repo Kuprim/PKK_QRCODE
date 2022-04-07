@@ -5,7 +5,6 @@ import 'package:absensi_qr/pages/Siswa/confirmasipage.dart';
 import 'package:absensi_qr/widgets/Siswa/navbar_siswa.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:qrscan/qrscan.dart' as scanner;
 
 class ScanQr extends StatefulWidget {
   const ScanQr({Key? key}) : super(key: key);
@@ -92,10 +91,8 @@ class _ScanQrState extends State<ScanQr> {
               Padding(
                 padding: EdgeInsets.only(top: size.height * 0.05),
                 child: GestureDetector(
-                  onTap: () async {
-                    await scanner.scan();
-                    setState(() {});
-                    //getImage();
+                  onTap: () {
+                    //
                   },
                   child: Image(
                     image: AssetImage("assets/images/qrcode.png"),

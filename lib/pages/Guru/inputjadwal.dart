@@ -13,6 +13,12 @@ class InputJadwal extends StatefulWidget {
   State<InputJadwal> createState() => _InputJadwalState();
 }
 
+final TextEditingController judulcontroller = TextEditingController();
+final TextEditingController namacontroller = TextEditingController();
+final TextEditingController jadwalcontroller = TextEditingController();
+final TextEditingController jamcontroller = TextEditingController();
+final TextEditingController deskripsicontroller = TextEditingController();
+
 class _InputJadwalState extends State<InputJadwal> {
   @override
   Widget build(BuildContext context) {
@@ -23,6 +29,37 @@ class _InputJadwalState extends State<InputJadwal> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Padding(
+              padding: EdgeInsets.only(
+                  top: size.height * 0.06,
+                  left: size.width * 0.1,
+                  bottom: size.height * 0.03),
+              child: Container(
+                height: size.height * 0.06,
+                width: size.width * 0.25,
+                decoration: BoxDecoration(
+                    color: Color(kThirdColor),
+                    borderRadius: BorderRadius.circular(20)),
+                child: TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (c) => NavbarGuru(),
+                      ),
+                    );
+                  },
+                  child: Text(
+                    "< Back",
+                    style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        fontFamily: 'Poppins'),
+                  ),
+                ),
+              ),
+            ),
             Padding(
               padding: EdgeInsets.only(top: size.height * 0.05),
               child: Container(
@@ -39,76 +76,34 @@ class _InputJadwalState extends State<InputJadwal> {
                             fontFamily: 'Poppins'),
                       ),
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: size.height * 0),
-                      child: Container(
-                        height: size.height * 0.06,
-                        width: size.width * 0.3,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Color(kThirdColor)),
-                        child: TextButton(
-                          onPressed: () {
-                            //
-                          },
-                          child: Text(
-                            "Simpan",
-                            style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                color: Color(kFirstColor),
-                                fontFamily: 'Poppins'),
-                          ),
-                        ),
-                      ),
-                    )
                   ],
                 ),
               ),
             ),
-            Container(
-              width: size.width * 0.7,
-              height: size.height * 0.3,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("assets/images/jadwal.png"),
-                    fit: BoxFit.fill),
+            Center(
+              child: Container(
+                width: size.width * 0.7,
+                height: size.height * 0.3,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("assets/images/jadwal.png"),
+                      fit: BoxFit.fill),
+                ),
               ),
             ),
             Center(
               child: Container(
                 width: size.width * 0.9,
-                height: size.height * 0.5,
-                child: FormJadwalGuru(),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(
-                  top: size.height * 0.06, left: size.width * 0.1, bottom: size.height * 0.03),
-              child: Container(
-                height: size.height * 0.06,
-                width: size.width * 0.25,
-                decoration: BoxDecoration(color: Color(kThirdColor), borderRadius: BorderRadius.circular(20)),
-                child: TextButton(
-                  onPressed: () {
-                    Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (c) => NavbarGuru(),
-                  ),
-                );
-                  },
-                  child: Text(
-                    "< Back",
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        fontFamily: 'Poppins'),
-                  ),
+                height: size.height * 0.8,
+                child: FormJadwalGuru(
+                  judulcontroller: judulcontroller,
+                  namacontroller: namacontroller,
+                  jadwalcontroller: jadwalcontroller,
+                  jamcontroller: jamcontroller,
+                  deskripsicontroller: deskripsicontroller,
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),
