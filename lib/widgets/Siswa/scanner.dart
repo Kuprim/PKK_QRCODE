@@ -1,3 +1,4 @@
+import 'package:absensi_qr/pages/Siswa/qrresult.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
@@ -34,7 +35,12 @@ class _ScannerState extends State<Scanner> {
                 controller.scannedDataStream.listen((val) {
                   if (mounted) {
                     _controller.dispose();
-                    Navigator.pop(context, val);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (c) => ResultQr(val),
+                      ),
+                    );
                   }
                 });
               }),
