@@ -3,8 +3,10 @@
 import 'package:absensi_qr/constants/const.dart';
 import 'package:absensi_qr/pages/Siswa/confirmasipage.dart';
 import 'package:absensi_qr/widgets/Siswa/navbar_siswa.dart';
+import 'package:absensi_qr/widgets/Siswa/scanner.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:qr_code_scanner/qr_code_scanner.dart';
 
 class ScanQr extends StatefulWidget {
   const ScanQr({Key? key}) : super(key: key);
@@ -21,6 +23,8 @@ class ScanQr extends StatefulWidget {
 // }
 
 class _ScanQrState extends State<ScanQr> {
+ late String _result;
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -91,9 +95,7 @@ class _ScanQrState extends State<ScanQr> {
               Padding(
                 padding: EdgeInsets.only(top: size.height * 0.05),
                 child: GestureDetector(
-                  onTap: () {
-                    //
-                  },
+                  onTap: () => _openscanner(context),
                   child: Image(
                     image: AssetImage("assets/images/qrcode.png"),
                   ),
@@ -105,4 +107,9 @@ class _ScanQrState extends State<ScanQr> {
       ),
     ));
   }
+  Future _openscanner(BuildContext context) async{
+    final result = await Navigator.push(context, MaterialPageRoute(builder: (c) => Scanner()));
+    _result = result;
+  }
+ 
 }
